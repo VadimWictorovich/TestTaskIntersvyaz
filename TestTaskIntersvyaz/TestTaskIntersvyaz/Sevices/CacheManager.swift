@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 import AlamofireImage
 
+
 final class CacheManager {
     
     private init() {}

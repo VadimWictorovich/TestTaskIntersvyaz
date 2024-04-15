@@ -7,6 +7,10 @@
 
 import Foundation
 
+
 struct APIProperties {
     
+    private static let server = "https://jsonplaceholder.typicode.com/"
+    private static let photosPath = server + "photos"
+    static let photosURL = URL(string: photosPath)
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C1159132BCD9594001A7F68 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1159122BCD9594001A7F68 /* AlamofireImage */; };
+		6C1159162BCD96B6001A7F68 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1159152BCD96B6001A7F68 /* SwiftyJSON */; };
+		6C1159182BCDA8D2001A7F68 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1159172BCDA8D2001A7F68 /* PhotoCell.swift */; };
+		6C11591A2BCDB1DB001A7F68 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1159192BCDB1DB001A7F68 /* DetailVC.swift */; };
 		6C54D5B42BCD3EC200925930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5B32BCD3EC200925930 /* AppDelegate.swift */; };
 		6C54D5B62BCD3EC200925930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5B52BCD3EC200925930 /* SceneDelegate.swift */; };
 		6C54D5BB2BCD3EC200925930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C54D5B92BCD3EC200925930 /* Main.storyboard */; };
@@ -14,13 +18,15 @@
 		6C54D5C02BCD3EC400925930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C54D5BE2BCD3EC400925930 /* LaunchScreen.storyboard */; };
 		6C54D5CC2BCD409C00925930 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5CB2BCD409C00925930 /* NetworkService.swift */; };
 		6C54D5CE2BCD40EF00925930 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5CD2BCD40EF00925930 /* StartVC.swift */; };
-		6C54D5D02BCD413800925930 /* GalleryImageCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5CF2BCD413800925930 /* GalleryImageCollectionVC.swift */; };
+		6C54D5D02BCD413800925930 /* GalleryPhotosCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5CF2BCD413800925930 /* GalleryPhotosCollectionVC.swift */; };
 		6C54D5D22BCD446000925930 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5D12BCD446000925930 /* CacheManager.swift */; };
 		6C54D5D42BCD758C00925930 /* APIProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5D32BCD758C00925930 /* APIProperties.swift */; };
-		6C54D5D62BCD75C900925930 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5D52BCD75C900925930 /* ImageModel.swift */; };
+		6C54D5D62BCD75C900925930 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D5D52BCD75C900925930 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C1159172BCDA8D2001A7F68 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		6C1159192BCDB1DB001A7F68 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		6C54D5B02BCD3EC200925930 /* TestTaskIntersvyaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskIntersvyaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C54D5B32BCD3EC200925930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C54D5B52BCD3EC200925930 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +36,10 @@
 		6C54D5C12BCD3EC400925930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C54D5CB2BCD409C00925930 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6C54D5CD2BCD40EF00925930 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
-		6C54D5CF2BCD413800925930 /* GalleryImageCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageCollectionVC.swift; sourceTree = "<group>"; };
+		6C54D5CF2BCD413800925930 /* GalleryPhotosCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotosCollectionVC.swift; sourceTree = "<group>"; };
 		6C54D5D12BCD446000925930 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		6C54D5D32BCD758C00925930 /* APIProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProperties.swift; sourceTree = "<group>"; };
-		6C54D5D52BCD75C900925930 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		6C54D5D52BCD75C900925930 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1159162BCD96B6001A7F68 /* SwiftyJSON in Frameworks */,
+				6C1159132BCD9594001A7F68 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				6C54D5B92BCD3EC200925930 /* Main.storyboard */,
-				6C54D5CD2BCD40EF00925930 /* StartVC.swift */,
-				6C54D5CF2BCD413800925930 /* GalleryImageCollectionVC.swift */,
 				6C54D5BE2BCD3EC400925930 /* LaunchScreen.storyboard */,
+				6C54D5CD2BCD40EF00925930 /* StartVC.swift */,
+				6C54D5CF2BCD413800925930 /* GalleryPhotosCollectionVC.swift */,
+				6C1159192BCDB1DB001A7F68 /* DetailVC.swift */,
+				6C1159172BCDA8D2001A7F68 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6C54D5D32BCD758C00925930 /* APIProperties.swift */,
-				6C54D5D52BCD75C900925930 /* ImageModel.swift */,
+				6C54D5D52BCD75C900925930 /* PhotoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +140,10 @@
 			dependencies = (
 			);
 			name = TestTaskIntersvyaz;
+			packageProductDependencies = (
+				6C1159122BCD9594001A7F68 /* AlamofireImage */,
+				6C1159152BCD96B6001A7F68 /* SwiftyJSON */,
+			);
 			productName = TestTaskIntersvyaz;
 			productReference = 6C54D5B02BCD3EC200925930 /* TestTaskIntersvyaz.app */;
 			productType = "com.apple.product-type.application";
@@ -142,7 +156,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					6C54D5AF2BCD3EC200925930 = {
 						CreatedOnToolsVersion = 14.2;
@@ -158,6 +172,10 @@
 				Base,
 			);
 			mainGroup = 6C54D5A72BCD3EC200925930;
+			packageReferences = (
+				6C1159112BCD9594001A7F68 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				6C1159142BCD96B5001A7F68 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 6C54D5B12BCD3EC200925930 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,13 +204,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C54D5B42BCD3EC200925930 /* AppDelegate.swift in Sources */,
+				6C1159182BCDA8D2001A7F68 /* PhotoCell.swift in Sources */,
 				6C54D5CC2BCD409C00925930 /* NetworkService.swift in Sources */,
-				6C54D5D02BCD413800925930 /* GalleryImageCollectionVC.swift in Sources */,
+				6C54D5D02BCD413800925930 /* GalleryPhotosCollectionVC.swift in Sources */,
 				6C54D5B62BCD3EC200925930 /* SceneDelegate.swift in Sources */,
+				6C11591A2BCDB1DB001A7F68 /* DetailVC.swift in Sources */,
 				6C54D5D22BCD446000925930 /* CacheManager.swift in Sources */,
 				6C54D5CE2BCD40EF00925930 /* StartVC.swift in Sources */,
 				6C54D5D42BCD758C00925930 /* APIProperties.swift in Sources */,
-				6C54D5D62BCD75C900925930 /* ImageModel.swift in Sources */,
+				6C54D5D62BCD75C900925930 /* PhotoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +274,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -314,6 +335,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -410,6 +432,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C1159112BCD9594001A7F68 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+		6C1159142BCD96B5001A7F68 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C1159122BCD9594001A7F68 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C1159112BCD9594001A7F68 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		6C1159152BCD96B6001A7F68 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C1159142BCD96B5001A7F68 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C54D5A82BCD3EC200925930 /* Project object */;
 }
