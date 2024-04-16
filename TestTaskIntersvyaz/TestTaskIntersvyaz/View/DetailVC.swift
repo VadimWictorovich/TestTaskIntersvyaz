@@ -43,13 +43,17 @@ final class DetailVC: UIViewController {
     
     
     // MARK: - Lifecycle VC
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startActivityAnimation()
         setupUI()
-        getPhoto()
         getTextLab()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getPhoto()
     }
     
     
@@ -95,7 +99,14 @@ final class DetailVC: UIViewController {
     
     
     @objc private func sharedImage() {
-        let shareController = UIActivityViewController(activityItems: sharePhoto, applicationActivities: nil)
-        present(shareController, animated: true)
+        startActivityAnimation()
+        DispatchQueue.global().async { [weak self] in
+            guard let self else { return }
+            let shareController = UIActivityViewController(activityItems: self.sharePhoto, applicationActivities: nil)
+            DispatchQueue.main.async {
+                self.present(shareController, animated: true)
+                self.stopActivityAnimation()
+            }
+        }
     }
 }
