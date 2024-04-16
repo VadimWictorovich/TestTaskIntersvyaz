@@ -34,9 +34,7 @@ final class DetailVC: UIViewController {
     }
     
     private func getPhoto() {
-        guard let photo,
-              let imagePath = photo.url,
-              let url = URL(string: imagePath) else { return }
+        guard let photo, let imagePath = photo.url, let url = URL(string: imagePath) else { return }
         NetworkService.downloadImage(from: url) { [weak self] image, error in
             DispatchQueue.main.async {
                 self?.imageView.image = image
@@ -66,5 +64,4 @@ final class DetailVC: UIViewController {
         NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .topMargin, multiplier: 1.0, constant: 10.0).isActive = true
         NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerXWithinMargins, multiplier: 1.0, constant: 0.0).isActive = true
     }
-    
 }
