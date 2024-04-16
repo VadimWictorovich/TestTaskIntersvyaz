@@ -9,6 +9,7 @@ import UIKit
 
 final class PhotoCell: UICollectionViewCell {
     
+    /*
     private lazy var imageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -32,4 +33,6 @@ final class PhotoCell: UICollectionViewCell {
             }
         }
     }
-}
+     */
+    
+     }

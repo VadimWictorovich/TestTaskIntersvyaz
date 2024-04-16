@@ -40,7 +40,7 @@ final class StartVC: UIViewController {
     }
     
     @objc private func openGaleryCVC() {
-        let vc = GalleryPhotosCollectionVC()
+        let vc = GalleryPhotosCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

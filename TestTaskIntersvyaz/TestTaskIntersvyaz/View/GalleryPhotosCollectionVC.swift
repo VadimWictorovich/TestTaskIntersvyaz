@@ -10,13 +10,13 @@ import UIKit
 
 final class GalleryPhotosCollectionVC: UICollectionViewController {
     
-    private let reuseIdentifier = "Cell"
+    private let reuseIdentifier = "Cell1"
     private var photos: [PhotoModel]?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView!.register(PhotoCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         fetchPhotos()
     }
     
@@ -32,20 +32,21 @@ final class GalleryPhotosCollectionVC: UICollectionViewController {
     // MARK: - UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photos?.count ?? 0
+        4
+//        photos?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCell else { return  UICollectionViewCell() }
-        let photo = photos?[indexPath.row]
-        cell.thumbnailUrl = photo?.thumbnailUrl
+//        let photo = photos?[indexPath.row]
+//        cell.thumbnailUrl = photo?.thumbnailUrl
         return cell
     }
 
     // MARK: - UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let photo = photos?[indexPath.row]
+//        let photo = photos?[indexPath.row]
         
     }
     
