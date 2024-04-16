@@ -10,7 +10,8 @@ import UIKit
 
 final class StartVC: UIViewController {
     
-        
+    // MARK: - Properties
+
     private lazy var startButton: UIButton = {
         let but = UIButton()
         but.translatesAutoresizingMaskIntoConstraints = false
@@ -21,12 +22,18 @@ final class StartVC: UIViewController {
         but.addTarget(nil, action: #selector(openGaleryCVC), for: .touchUpInside)
         return but
     }()
+    
+
+    // MARK: - Lifecycle VC
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    
+    // MARK: - Methods
+
     private func setupUI() {
         view.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
         view.addSubview(startButton)
@@ -40,6 +47,7 @@ final class StartVC: UIViewController {
     }
     
     @objc private func openGaleryCVC() {
+        startActivityAnimation()
         let vc = GalleryPhotosCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
         self.navigationController?.pushViewController(vc, animated: true)
     }

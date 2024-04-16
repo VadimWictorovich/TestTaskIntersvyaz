@@ -24,9 +24,7 @@ final class NetworkService {
                 case .success(let data):
                     guard let data = data else {
                         callback(value, err)
-                        return
-                    }
-                    print(JSON(data))
+                        return }
                     do {
                         value = try JSONDecoder().decode([PhotoModel].self, from: data)
                     } catch (let decoderError) {

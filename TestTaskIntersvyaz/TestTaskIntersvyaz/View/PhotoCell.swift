@@ -9,7 +9,10 @@ import UIKit
 
 final class PhotoCell: UICollectionViewCell {
     
-    /*
+    // MARK: - Properties
+
+    var thumbnailUrl: String? { didSet { getThumbnail() } }
+
     private lazy var imageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -18,8 +21,21 @@ final class PhotoCell: UICollectionViewCell {
         return iv
     }()
     
-    var thumbnailUrl: String? { didSet { getThumbnail() } }
     
+    // MARK: - Lifecycle cell
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(imageView)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    // MARK: - Methods
     
     private func getThumbnail() {
         guard let thumbnailUrl = thumbnailUrl else { return }
@@ -33,6 +49,13 @@ final class PhotoCell: UICollectionViewCell {
             }
         }
     }
-     */
     
-     }
+    private func setupUI() {
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+}

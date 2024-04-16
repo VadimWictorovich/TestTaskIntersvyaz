@@ -7,15 +7,18 @@
 
 import UIKit
 
+
 final class DetailVC: UIViewController {
     
+    // MARK: - Properties
+
+    private var sharePhoto: [UIImage] = []
     var photo: PhotoModel?
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = #imageLiteral(resourceName: "defaultImage.png")
         return imageView
     }()
     
@@ -23,21 +26,41 @@ final class DetailVC: UIViewController {
         let lab = UILabel()
         lab.translatesAutoresizingMaskIntoConstraints = false
         lab.text = "Name"
+        lab.numberOfLines = 0
         return lab
     }()
+    
+    private lazy var barItem: UIBarButtonItem = {
+        let but = UIBarButtonItem(image:  UIImage(systemName: "square.and.arrow.up"),
+                                  style: .plain,
+                                  target: self,
+                                  action: #selector(sharedImage)
+        )
+        return but
+    }()
+    
+    
+    // MARK: - Lifecycle VC
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        startActivityAnimation()
         setupUI()
         getPhoto()
         getTextLab()
     }
+    
+    
+    // MARK: - Methods
     
     private func getPhoto() {
         guard let photo, let imagePath = photo.url, let url = URL(string: imagePath) else { return }
         NetworkService.downloadImage(from: url) { [weak self] image, error in
             DispatchQueue.main.async {
                 self?.imageView.image = image
+                self?.stopActivityAnimation()
+                guard let image else { return }
+                self?.sharePhoto.append(image)
             }
         }
     }
@@ -49,7 +72,9 @@ final class DetailVC: UIViewController {
         }
     }
     
+    
     private func setupUI() {
+        navigationItem.rightBarButtonItem = barItem
         view.addSubview(imageView)
         view.addSubview(label)
         setupNSLayoutConstraints()
@@ -62,6 +87,13 @@ final class DetailVC: UIViewController {
 
         
         NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .topMargin, multiplier: 1.0, constant: 10.0).isActive = true
-        NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerXWithinMargins, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1.0, constant: 30.0).isActive = true
+        NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1.0, constant: -30.0).isActive = true
+    }
+    
+    
+    @objc private func sharedImage() {
+        let shareController = UIActivityViewController(activityItems: sharePhoto, applicationActivities: nil)
+        present(shareController, animated: true)
     }
 }
