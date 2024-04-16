@@ -41,6 +41,6 @@ final class StartVC: UIViewController {
     
     @objc private func openGaleryCVC() {
         let vc = GalleryPhotosCollectionVC()
-        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
