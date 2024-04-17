@@ -27,7 +27,7 @@ final class GalleryPhotosCollectionVC: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let layout = UICollectionViewFlowLayout()
-        let sizeWH = UIScreen.main.bounds.width / 2 - 5
+        let sizeWH = UIScreen.main.bounds.width / 3 - 10
         layout.itemSize = CGSize(width: sizeWH, height: sizeWH)
         collectionView.collectionViewLayout = layout
     }
